@@ -1,0 +1,70 @@
+---
+# README.md template
+# Spring MCP Code Intelligence Server
+
+[![CI Pipeline](https://github.com/yourusername/spring-mcp-code-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/spring-mcp-code-intelligence/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/yourusername/spring-mcp-code-intelligence/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/spring-mcp-code-intelligence)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A sophisticated Model Context Protocol (MCP) server built with Spring Boot that analyzes codebases and provides intelligent context to AI models.
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/spring-mcp-code-intelligence.git
+cd spring-mcp-code-intelligence
+
+# Start with Docker Compose
+docker-compose up -d
+
+# Or run locally
+./mvnw spring-boot:run
+```
+
+## 📋 Prerequisites
+
+- Java 21+
+- Docker & Docker Compose
+- PostgreSQL 15+
+- Redis 7+
+
+## 🏗️ Architecture
+
+This project demonstrates:
+- **Spring Boot 3.2+** with reactive programming (WebFlux)
+- **Model Context Protocol** implementation
+- **Code analysis** and intelligence features
+- **GitHub integration** for repository analysis
+- **Vector search** for semantic code search
+- **Production-ready** observability and monitoring
+
+## 🔧 Configuration
+
+Set environment variables:
+
+```bash
+export GITHUB_TOKEN=your_github_token
+export DATABASE_URL=jdbc:postgresql://localhost:5432/springmcp
+export REDIS_HOST=localhost
+```
+
+## 📖 API Documentation
+
+Once running, visit:
+- API Docs: http://localhost:8080/swagger-ui.html
+- Health Check: http://localhost:8080/actuator/health
+- Metrics: http://localhost:8080/actuator/metrics
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+./mvnw test
+
+# Integration tests
+./mvnw failsafe:integration-test
+
+# All tests with coverage
+./mvnw clean verify
+```
