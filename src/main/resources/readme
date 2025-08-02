@@ -2,8 +2,8 @@
 # README.md template
 # Spring MCP Code Intelligence Server
 
-[![CI Pipeline](https://github.com/yourusername/spring-mcp-code-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/spring-mcp-code-intelligence/actions/workflows/ci.yml)
-[![Coverage](https://codecov.io/gh/yourusername/spring-mcp-code-intelligence/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/spring-mcp-code-intelligence)
+[![CI Pipeline](https://github.com/yourusername/spring-mcp-code-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/spring-mcp-code-intelligence/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/yourusername/spring-mcp-code-intelligence/branch/main/graph/badge.svg)](https://codecov.io/gh/spring-mcp-code-intelligence)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A sophisticated Model Context Protocol (MCP) server built with Spring Boot that analyzes codebases and provides intelligent context to AI models.
