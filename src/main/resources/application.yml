@@ -1,0 +1,83 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  application:
+    name: spring-mcp-code-intelligence
+  
+  profiles:
+    active: dev
+  
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/springmcp}
+    username: ${DATABASE_USERNAME:springmcp}
+    password: ${DATABASE_PASSWORD:springmcp}
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+  
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+  
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000
+  
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+logging:
+  level:
+    com.yourname.springmcp: INFO
+    org.springframework.security: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+app:
+  github:
+    token: ${GITHUB_TOKEN:}
+    api-url: https://api.github.com
+  
+  analysis:
+    max-file-size: 10MB
+    supported-languages:
+      - java
+      - javascript
+      - python
+      - typescript
+      - go
+      - rust
+    
+  cache:
+    analysis-ttl: 3600
+    context-ttl: 1800
