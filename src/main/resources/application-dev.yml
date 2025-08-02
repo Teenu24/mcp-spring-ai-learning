@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  
+  logging:
+    level:
+      com.yourname.springmcp: DEBUG
+      org.springframework.web: DEBUG
+
+app:
+  cors:
+    allowed-origins: "http://localhost:3000,http://localhost:8080"
