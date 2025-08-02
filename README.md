@@ -9,3 +9,15 @@ This repository is for learning and exploring **MCP Spring** and **Spring AI**.
 
 ## Getting Started
 Clone the repository and start exploring the Spring frameworks.
+
+
+
+
+This project will demonstrate:
+
+Modern Spring Boot expertise
+AI/ML integration skills
+Microservices architecture
+DevOps and deployment knowledge
+Open source contribution quality
+Technical leadership and documentation
